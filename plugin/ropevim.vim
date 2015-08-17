@@ -4,6 +4,8 @@ endif
 
 function! LoadRope()
 python << EOF
+import os
+sys.path.append( os.path.expanduser("~/.vim/git_submodules/ropevim") )
 import ropevim
 from rope_omni import RopeOmniCompleter
 EOF
